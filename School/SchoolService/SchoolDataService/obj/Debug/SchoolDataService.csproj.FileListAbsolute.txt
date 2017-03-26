@@ -1,0 +1,7 @@
+E:\POCS\School\SchoolService\SchoolDataService\bin\Debug\SchoolDataService.dll
+E:\POCS\School\SchoolService\SchoolDataService\bin\Debug\SchoolDataService.pdb
+E:\POCS\School\SchoolService\SchoolDataService\obj\Debug\SchoolDataService.dll
+E:\POCS\School\SchoolService\SchoolDataService\obj\Debug\SchoolDataService.pdb
+E:\POCS\School\SchoolService\SchoolDataService\bin\Debug\SchoolModel.dll
+E:\POCS\School\SchoolService\SchoolDataService\bin\Debug\SchoolModel.pdb
+E:\POCS\School\SchoolService\SchoolDataService\obj\Debug\SchoolDataService.csprojResolveAssemblyReference.cache

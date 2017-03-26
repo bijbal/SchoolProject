@@ -1,0 +1,12 @@
+E:\POCS\School\SchoolProcessor\obj\Debug\SchoolProcessor.csprojResolveAssemblyReference.cache
+E:\POCS\School\SchoolProcessor\bin\Debug\SchoolProcessor.dll
+E:\POCS\School\SchoolProcessor\bin\Debug\SchoolProcessor.pdb
+E:\POCS\School\SchoolProcessor\bin\Debug\Castle.Windsor.dll
+E:\POCS\School\SchoolProcessor\bin\Debug\SchoolModel.dll
+E:\POCS\School\SchoolProcessor\bin\Debug\SchoolModel.pdb
+E:\POCS\School\SchoolProcessor\bin\Debug\Castle.Windsor.pdb
+E:\POCS\School\SchoolProcessor\bin\Debug\Castle.Windsor.xml
+E:\POCS\School\SchoolProcessor\obj\Debug\SchoolProcessor.dll
+E:\POCS\School\SchoolProcessor\obj\Debug\SchoolProcessor.pdb
+E:\POCS\School\SchoolProcessor\bin\Debug\SchoolDataService.dll
+E:\POCS\School\SchoolProcessor\bin\Debug\SchoolDataService.pdb

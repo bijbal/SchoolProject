@@ -1,0 +1,61 @@
+﻿@model SchoolModel.Student
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+
+    <div class="row"> 
+        <div class="col-lg-6"> <img alt="Student Image" src="../../Images/Student.png" height="100" width="100" /> </div>
+        <div class="col-lg-6" style="padding-bottom:15px;"> 
+            <ul class="simplelist"> 
+                <li> <h4>@Model.FullName</h4></li>
+                <li> <h3>{{classFullName}}</h3></li>
+                <li> <h4>{{teacherName}} </h4></li>
+                <li> <h4>{{parentName}} </h4></li>
+                <li> <h4>{{parentContact}} </h4></li>
+            </ul>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="panel panel-success">
+                  <div class="panel-heading"> <h5>Achievements</h5></div>
+                  <div class="panel-body">
+
+                      <ul class="simplelist"> <!--todo fill it USING angular-->
+                          <li> 5th Ranked in the class</li>
+                          <li> Lorem ipsum dolor sit amet, consectetur adipiscing</li>
+                          <li> Sed do eiusmod tempor incididunt ut labore et dolore</li>
+                          <li> Lorem ipsum dolor sit amet, consectetur adipiscing</li>
+
+                      </ul>
+                  </div>
+                </div>
+            </div>
+            <div class="col-sm-1"> &nbsp;</div> @*style="display: inline-block;"*@
+            <div class="col-lg-5">
+                <div class="panel panel-warning">
+                  <div class="panel-heading" > <h5 style="display: inline-block; padding-right:50px;">Detentions </h5> @Html.ActionLink("New", "Details", "Detention")</div>
+                  <div class="panel-body">
+
+                      <ul class="simplelist">
+                          <li> 3/25/2016 HomeWork Not Done </li>
+                          <li> 3/25/2016 Lying</li>
+                          <li> 2/20/2016 Fighting </li>
+                          <li> 1/25/2016 HomeWork Not Done</li>
+                          <li> <button class="Create" ></button></li>
+                      </ul>
+                  </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            
+        </div>
+    </div>
+</div>

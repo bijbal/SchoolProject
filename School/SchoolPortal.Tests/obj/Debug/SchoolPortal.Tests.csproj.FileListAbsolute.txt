@@ -1,0 +1,12 @@
+E:\POCS\School\SchoolPortal.Tests\bin\Debug\SchoolPortal.Tests.dll.config
+E:\POCS\School\SchoolPortal.Tests\bin\Debug\SchoolPortal.Tests.dll
+E:\POCS\School\SchoolPortal.Tests\bin\Debug\SchoolPortal.Tests.pdb
+E:\POCS\School\SchoolPortal.Tests\bin\Debug\SchoolPortal.dll
+E:\POCS\School\SchoolPortal.Tests\bin\Debug\EntityFramework.dll
+E:\POCS\School\SchoolPortal.Tests\bin\Debug\SchoolPortal.pdb
+E:\POCS\School\SchoolPortal.Tests\bin\Debug\EntityFramework.xml
+E:\POCS\School\SchoolPortal.Tests\obj\Debug\SchoolPortal.Tests.csprojResolveAssemblyReference.cache
+E:\POCS\School\SchoolPortal.Tests\obj\Debug\SchoolPortal.Tests.dll
+E:\POCS\School\SchoolPortal.Tests\obj\Debug\SchoolPortal.Tests.pdb
+E:\POCS\School\SchoolPortal.Tests\bin\Debug\SchoolModel.dll
+E:\POCS\School\SchoolPortal.Tests\bin\Debug\SchoolModel.pdb
