@@ -10,8 +10,7 @@ namespace SchoolModel
     {
         public int SchoolId { get; set; }
         public string Name { get; set; }
-        public string Address { get; set; 
-}
+        public string Address { get; set; }
     }
 
     public abstract class SchoolPerson
