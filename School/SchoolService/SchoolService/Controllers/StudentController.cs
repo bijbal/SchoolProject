@@ -74,8 +74,7 @@ namespace SchoolService.Controllers
 
         private IEnumerable<SchoolModel.StudentDetension> CreateDetention(int sid)
         {
-            yield return new SchoolModel.StudentDetension { DetentionTypeId = 1, StartDate = DateTime.Today.AddDays(-30), StudentID = sid };
-            yield return new SchoolModel.StudentDetension { DetentionTypeId = 2, StartDate = DateTime.Today.AddDays(-30), StudentID = sid };
+            return null;
         }
     }
 }

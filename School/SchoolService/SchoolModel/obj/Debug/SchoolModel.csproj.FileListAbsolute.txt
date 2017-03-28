@@ -3,3 +3,7 @@ E:\POCS\School\SchoolService\SchoolModel\bin\Debug\SchoolModel.pdb
 E:\POCS\School\SchoolService\SchoolModel\obj\Debug\SchoolModel.dll
 E:\POCS\School\SchoolService\SchoolModel\obj\Debug\SchoolModel.pdb
 E:\POCS\School\SchoolService\SchoolModel\obj\Debug\SchoolModel.csprojResolveAssemblyReference.cache
+E:\GIT\School\SchoolService\SchoolModel\bin\Debug\SchoolModel.dll
+E:\GIT\School\SchoolService\SchoolModel\bin\Debug\SchoolModel.pdb
+E:\GIT\School\SchoolService\SchoolModel\obj\Debug\SchoolModel.dll
+E:\GIT\School\SchoolService\SchoolModel\obj\Debug\SchoolModel.pdb

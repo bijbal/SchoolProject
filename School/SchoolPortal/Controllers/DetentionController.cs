@@ -21,7 +21,8 @@ namespace SchoolPortal.Controllers
 
         public ActionResult Details(int id=0)
         {
-            return View();
+            
+            return View(new SchoolModel.StudentDetension());
         }
 
         //

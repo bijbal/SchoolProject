@@ -14,6 +14,7 @@ namespace SchoolService
 
     public class WebApiApplication : System.Web.HttpApplication
     {
+        private static Castle.Windsor.IWindsorContainer _container; 
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
@@ -22,6 +23,18 @@ namespace SchoolService
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            RegisterWindsonDiConfiguration(GlobalConfiguration.Configuration);
         }
+
+        public static void RegisterWindsonDiConfiguration(HttpConfiguration config)
+        {
+            
+            _container = new Castle.Windsor.WindsorContainer();
+            _container.Install(Castle.Windsor.Installer.FromAssembly.This());
+            Castle.Windsor.WindsorContainer container = new Castle.Windsor.WindsorContainer();
+            config.DependencyResolver = new DiResolver(_container);
+
+        }
+
     }
 }

@@ -42,8 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DetentionCalculator.cs" />
-    <Compile Include="DetentionRule.cs" />
+    <Compile Include="Calculators\ConcurrentDetentionCalculator.cs" />
+    <Compile Include="Calculators\ConsecutiveDetentionCalculator.cs" />
+    <Compile Include="Calculators\DetentionCalculator.cs" />
+    <Compile Include="Rules\GoodTimeBadtimeFilter.cs" />
+    <Compile Include="Rules\IDetentionFilter.cs" />
     <Compile Include="DetentionType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StudentDetention.cs" />
@@ -58,6 +61,7 @@
       <Name>SchoolModel</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

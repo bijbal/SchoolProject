@@ -5,3 +5,13 @@ E:\POCS\School\SchoolService\SchoolDataService\obj\Debug\SchoolDataService.pdb
 E:\POCS\School\SchoolService\SchoolDataService\bin\Debug\SchoolModel.dll
 E:\POCS\School\SchoolService\SchoolDataService\bin\Debug\SchoolModel.pdb
 E:\POCS\School\SchoolService\SchoolDataService\obj\Debug\SchoolDataService.csprojResolveAssemblyReference.cache
+E:\GIT\School\SchoolService\SchoolDataService\bin\Debug\SchoolDataService.dll.config
+E:\GIT\School\SchoolService\SchoolDataService\bin\Debug\SchoolDataService.dll
+E:\GIT\School\SchoolService\SchoolDataService\bin\Debug\SchoolDataService.pdb
+E:\GIT\School\SchoolService\SchoolDataService\bin\Debug\EntityFramework.dll
+E:\GIT\School\SchoolService\SchoolDataService\bin\Debug\SchoolModel.dll
+E:\GIT\School\SchoolService\SchoolDataService\bin\Debug\SchoolModel.pdb
+E:\GIT\School\SchoolService\SchoolDataService\bin\Debug\EntityFramework.xml
+E:\GIT\School\SchoolService\SchoolDataService\obj\Debug\SchoolDataService.csprojResolveAssemblyReference.cache
+E:\GIT\School\SchoolService\SchoolDataService\obj\Debug\SchoolDataService.dll
+E:\GIT\School\SchoolService\SchoolDataService\obj\Debug\SchoolDataService.pdb

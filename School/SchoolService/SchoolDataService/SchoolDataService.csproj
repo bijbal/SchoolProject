@@ -30,8 +30,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -39,14 +46,74 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Detention.cs">
+      <DependentUpon>SchoolsDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DetentionAction.cs">
+      <DependentUpon>SchoolsDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DetentionFilter.cs">
+      <DependentUpon>SchoolsDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FiltersAccessor.cs" />
+    <Compile Include="School.cs">
+      <DependentUpon>SchoolsDb.tt</DependentUpon>
+    </Compile>
     <Compile Include="SchoolData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SchoolsDb.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchoolsDb.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolsDb.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchoolsDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolsDb.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchoolsDb.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Student.cs">
+      <DependentUpon>SchoolsDb.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StudentDetention.cs">
+      <DependentUpon>SchoolsDb.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SchoolModel\SchoolModel.csproj">
       <Project>{6d98f291-3280-4517-9e6a-a6bf83b3d9bc}</Project>
       <Name>SchoolModel</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <EntityDeploy Include="SchoolsDb.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SchoolsDb.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="SchoolsDb.edmx.diagram">
+      <DependentUpon>SchoolsDb.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SchoolsDb.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SchoolsDb.edmx</DependentUpon>
+      <LastGenOutput>SchoolsDb.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="SchoolsDb.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SchoolsDb.edmx</DependentUpon>
+      <LastGenOutput>SchoolsDb.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

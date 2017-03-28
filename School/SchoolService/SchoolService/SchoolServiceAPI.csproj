@@ -39,6 +39,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="castle.core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DOWNLOADS\Castle.Windsor.3.4.0\castle.core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor, Version=3.4.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\DOWNLOADS\Castle.Windsor.3.4.0\Castle.Windsor.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -125,6 +133,7 @@
     <Compile Include="Controllers\DetentionController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="DependecyResolver.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -179,6 +188,14 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\SchoolProcessor\SchoolProcessor.csproj">
+      <Project>{77e2bbe8-a0a4-4920-9a1e-87e40b1b4c90}</Project>
+      <Name>SchoolProcessor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SchoolDataService\SchoolDataService.csproj">
+      <Project>{60befc73-2df7-42f3-8762-504c383a0cb1}</Project>
+      <Name>SchoolDataService</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SchoolModel\SchoolModel.csproj">
       <Project>{6d98f291-3280-4517-9e6a-a6bf83b3d9bc}</Project>
       <Name>SchoolModel</Name>

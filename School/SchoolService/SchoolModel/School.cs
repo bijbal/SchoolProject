@@ -45,14 +45,17 @@ namespace SchoolModel
 
     public class StudentDetension
     {
-        public int DetentionTypeId { get; set; }
-        public int StudentID { get; set; }
+        public int Id { get; set; }
+        public int StudentId { get; set; }
+        public string StudentName { get; set; }
         public DateTime StartDate { get; set; }
-        public DetentionType Detenton{ get; set; }
-        public StudentDetension()
-        {
-            this.Detenton = new DetentionType();
-        }
+        public int DetentionTypeId { get; set; }
+        public string DetentionTypeName { get; set; }
+        public int DetentionDuration { get; set; }
+        public int PunishmentTime { get; set; }
+        public string Remarks { get; set; }
+        public int SuggestedPunishment { get; set; }
+        public int DetentionActionID { get; set; }
     }
 
     public class DetentionType
@@ -67,5 +70,7 @@ namespace SchoolModel
         public int StudentId { get; set; }
         public string StudentName { get; set; }
         public int EffectiveResult { get; set; }
+        public bool HasError { get; set; }
+        public string ErrorMessage { get; set; }
     }
 }

@@ -5,4 +5,89 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Placeholder for New Detention creation</h2>
+@section moreScripts{
+    <style>
+        .row div{
+            padding-bottom: 5px;
+        }
+    </style>
+}
+<div class="container">
+    <input type="hidden" value="@Model.StudentId" />
+    <div class="row" style="padding-bottom:25px;">
+        <div class="col-sm-1" >
+            <img src="../../Images/Student.png" style="overflow:no-display" width="100" height="100" />
+        </div>
+        <div class="col-sm-2" >
+            <ul class="simplelist">
+                <li>
+                    <h6>@Model.StudentName</h6>
+                </li> 
+                <li>
+                    <h5>
+                        AAA
+                    </h5>
+                </li>
+           </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-1">Detention </div>
+        <div class="col-sm-2">
+            <select>
+                    <option value="1" selected>Lying</option>
+                    <option value="2">Fighting</option>
+                </select>
+        </div>
+    </div>
+    @*<div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-2">
+            <ul class="simplelist" style="padding:0px;">
+                <li>Selected Detention Types</li>
+            </ul> </div>
+    </div>*@
+    <div class="row">
+        <div class="col-sm-1">Detention Type </div>
+        <div class="col-sm-4">
+                <select>
+                    <option value="1" selected>Concurrent</option>
+                    <option value="2">Consecutive</option>
+                </select>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-1">
+            As On
+        </div>
+        <div class="col-sm-1">
+            <input type="date" min="@DateTime.Today" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-1">
+           Remarks
+        </div>
+        <div class="col-sm-1">
+            <textarea></textarea>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-1"> </div>
+        <div class="col-sm-1">
+@*            <ul class="simplelist" style="list-style-type:none; margin:0px; " >
+                <li><button >Submit</button> </li>
+                <li><button >Clear</button> </li>
+            </ul>*@
+        <button >Submit</button> 
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-5">
+            <span> Action messages!</span>
+        </div>
+    </div>
+
+</div>

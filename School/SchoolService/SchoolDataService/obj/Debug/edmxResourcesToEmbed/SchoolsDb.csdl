@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SchoolModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Entities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Detentions" EntityType="SchoolModel.Detention" />
+    <EntitySet Name="DetentionActions" EntityType="SchoolModel.DetentionAction" />
+    <EntitySet Name="DetentionFilters" EntityType="SchoolModel.DetentionFilter" />
+    <EntitySet Name="Schools" EntityType="SchoolModel.School" />
+    <EntitySet Name="Students" EntityType="SchoolModel.Student" />
+    <AssociationSet Name="FK_Student_School" Association="SchoolModel.FK_Student_School">
+      <End Role="School" EntitySet="Schools" />
+      <End Role="Student" EntitySet="Students" />
+    </AssociationSet>
+    <EntitySet Name="StudentDetentions" EntityType="SchoolModel.StudentDetention" />
+  </EntityContainer>
+  <EntityType Name="Detention">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="PenaltyInMinutes" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DetentionAction">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ProcessorType" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="DetentionFilter">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="FilterName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="FilterProcessor" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="School">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ContactNo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Students" Relationship="SchoolModel.FK_Student_School" FromRole="School" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ParentName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ParentContact" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="ParentEmail" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Class" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="Division" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="JoinDate" Type="DateTime" Precision="3" />
+    <Property Name="SchoolId" Type="Int32" />
+    <NavigationProperty Name="School" Relationship="SchoolModel.FK_Student_School" FromRole="Student" ToRole="School" />
+  </EntityType>
+  <Association Name="FK_Student_School">
+    <End Role="School" Type="SchoolModel.School" Multiplicity="0..1" />
+    <End Role="Student" Type="SchoolModel.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="School">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="SchoolId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="StudentDetention">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="StudentId" Nullable="false" />
+    <Property Type="Int32" Name="DetentionId" Nullable="false" />
+    <Property Type="DateTime" Name="StartDate" Nullable="false" Precision="3" />
+    <Property Type="Int32" Name="Duration" Nullable="false" />
+    <Property Type="String" Name="Remarks" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="DetentionActionId" />
+  </EntityType>
+</Schema>

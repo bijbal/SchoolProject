@@ -11,6 +11,7 @@
     <script src="../../Scripts/bootstrap.js"></script>
     <script src="../../Scripts/angular.min.js"></script>
     <script src="../../Scripts/angular-route.js"></script>
+    @RenderSection("moreScripts", false)
 </head>
 <body>
     <div class="page">
@@ -24,7 +25,7 @@
             <div id="menucontainer">
                 <ul id="menu">
                     <li>@*@Html.ActionLink("Johny", "Details", "Home")*@</li>
-                    <li><a href="/Student/Details/1" >Home</a></li>
+                    <li><a href="/Student/Details/1" >Johny</a></li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                 </ul>
             </div>
