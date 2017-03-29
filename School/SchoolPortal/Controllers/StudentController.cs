@@ -23,7 +23,7 @@ namespace SchoolPortal.Controllers
         public ActionResult Details(int id)
         {
             var user= new SchoolServiceProxy().GetStrudent(id);
-
+            if (user == null) user = new SchoolModel.Student();
             //var model = new SchoolModel.Student { Id = id, FirstName = "Johny", LastName = "Johny", Division = "AA", Class = "VI", SchoolId = 1 };
             return View("Index", user);
         }

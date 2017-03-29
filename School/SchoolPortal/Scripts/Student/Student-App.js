@@ -16,7 +16,7 @@ var controller = studentApp.controller('studentController', function ($scope, st
                 }
             }
 
-            $scope.message = "Total Detentions -" + total;
+            $scope.message = "Total Detentions -" + (total/60) + " hours"
         });
     };
     

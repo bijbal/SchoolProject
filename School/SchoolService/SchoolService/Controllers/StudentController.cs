@@ -9,49 +9,32 @@ namespace SchoolService.Controllers
 {
     public class StudentController : ApiController
     {
+        //dEPENDENCY RESOLVER NEED TO DEBUGG SO ALTERNATE
+        SchoolDataService.ISchoolDataService dataService; 
+        
+        
+        public StudentController(SchoolDataService.ISchoolDataService dataSrvc )
+        {
+
+            this.dataService = dataSrvc;
+        }
+
+        //DI IS NOT WORKING AT THE MOMENT SO SWITCHING TO CONVENSIONAL 
+        public StudentController()
+        {
+            this.dataService = new SchoolDataService.DataService();
+        }
         // GET api/student
         public HttpResponseMessage Get()
         {
-            var s1=  new SchoolModel.Student
-            {
-                Id = 1,
-                Division = "AA",
-                Class = "VI",
-                FirstName = "Johny Jr.",
-                LastName = "Johny",
-                SchoolId = 1,
-                
-            };
-
-            var s2 = new SchoolModel.Student
-            {
-                Id = 2,
-                Division = "AA",
-                Class = "VI",
-                FirstName = "ABC Jr.",
-                LastName = "ABC",
-                SchoolId = 1,
-                
-            };
-            var ret = new List<SchoolModel.Student>(); 
-            ret.Add(s1);
-            ret.Add(s2);
-            return Request.CreateResponse( HttpStatusCode.OK, ret);
+            return Request.CreateErrorResponse(HttpStatusCode.NotFound, "Not Implemented");
         }
            
         // GET api/student/5
         public HttpResponseMessage Get(int id)
         {
-            var s1 = new SchoolModel.Student
-            {
-                Id = id,
-                Division = "AA",
-                Class = "VI",
-                FirstName = "Johny Jr.",
-                LastName = "Johny",
-                SchoolId = 1,
-
-            };
+            var s1 = dataService.GetStudentAsync(id, 0).Result;
+            
 
             return Request.CreateResponse(HttpStatusCode.OK, s1);
         }

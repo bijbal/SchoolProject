@@ -44,9 +44,9 @@ namespace SchoolDataService
             {
                 Class = student.Class,
                 Division = student.Division,
-                FirstName = student.Division,
+                FirstName = student.FirstName,
                 Id = student.Id,
-                LastName = student.Division,
+                LastName = student.LastName,
                 ParentContact = student.ParentContact,
                 ParentName = student.ParentName,
                 SchoolId = student.SchoolId.Value
@@ -63,7 +63,7 @@ namespace SchoolDataService
                                    select new SchoolModel.StudentDetension
                                    {
                                        Id = d.Id,
-                                       DetentionDuration = d.Duration,
+                                       DetentionDuration = dt.PenaltyInMinutes,
                                        DetentionTypeId = dt.Id,
                                        DetentionTypeName = dt.Name,
                                        PunishmentTime = d.Duration,
