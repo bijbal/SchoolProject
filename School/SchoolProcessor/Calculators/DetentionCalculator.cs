@@ -66,6 +66,7 @@ namespace SchoolProcessor
         //    //return new SchoolModel.DetentionCalculationResult { EffectiveResult =Convert.ToInt32( total), StudentId = student.Id, StudentName = student.FullName };
         //    return null;
         //}
+
         public virtual async Task<SchoolModel.DetentionCalculationResult> CalculateResult(SchoolModel.StudentDetension detention)
         {
             var dataService = container.Resolve<ISchoolDataService>();

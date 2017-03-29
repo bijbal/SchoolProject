@@ -12,11 +12,12 @@ var controller = studentApp.controller('studentController', function ($scope, st
             var total = 0;
             if ($scope.detentions != null) {
                 for (var i = 0; i < $scope.detentions.length; i++) {
-                    total += $scope.detentions[i].DetentionDuration;
+                    total += $scope.detentions[i].PunishmentTime;
                 }
             }
-
-            $scope.message = "Total Detentions -" + (total/60) + " hours"
+            if (total >=480) // testing 
+                alert('Exceeded Detention Limit 0Inform Parents');
+            $scope.message = "Total Detentions -" + (Math.round(total/60)) + " hours"
         });
     };
     
